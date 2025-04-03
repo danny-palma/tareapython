@@ -2,7 +2,7 @@ import pygraphviz as pgv
 
 def main():
   # Ingresar los nodos separados por coma
-  entrada = input("Ingrese los nodos separados por coma (Ej: Gina, Paola, Genesis, Omar, Adis): ")
+  entrada = input("Ingrese los nodos separados por coma (Ej: hierro, bronce, slime, diamante, lapislázuli): ")
   nodos = [nodo.strip() for nodo in entrada.split(",") if nodo.strip()]
 
   # Ingresar el nodo a buscar
