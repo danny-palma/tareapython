@@ -23,8 +23,8 @@ def build_tree():
     return raiz, tree
 
 def main():
-    objetivo = input("Ingrese el nodo a buscar: ").strip()
     raiz, tree = build_tree()
+    objetivo = input("Ingrese el nodo a buscar: ").strip()
 
     camino_encontrado = []
     if not dfs(tree, raiz, objetivo, [], camino_encontrado):
