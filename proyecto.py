@@ -38,12 +38,13 @@ def main():
             G.add_node(hijo)
             G.add_edge(padre, hijo)
 
-    # Realzar el nodo objetivo (si se encontró en el camino de búsqueda)
+    # Realzar los nodos en el camino (si se encontró en el camino de búsqueda)
     if camino_encontrado:
-        nodo_objetivo = G.get_node(objetivo)
-        nodo_objetivo.attr['color'] = 'red'
-        nodo_objetivo.attr['style'] = 'filled'
-        nodo_objetivo.attr['fillcolor'] = 'lightgray'
+        for nodo in camino_encontrado:
+            n = G.get_node(nodo)
+            n.attr['color'] = 'red'
+            n.attr['style'] = 'filled'
+            n.attr['fillcolor'] = 'lightgray'
 
     G.layout(prog='dot')
     G.draw('ruta_busqueda.png')
